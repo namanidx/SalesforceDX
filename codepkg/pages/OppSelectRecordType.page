@@ -1,0 +1,19 @@
+<apex:page standardController="opportunity" extensions="RecordTypesOpptyExtension" >
+  <apex:form >
+      <apex:pageBlock title="Select Record Type">
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Continue" action="{!getRedir}"/>
+           <!--  <apex:param value="{!opportunity.RecordType}" assignTo="{!recordType}" name="oppRid"/> 
+          </apex:commandButton> -->
+          </apex:pageBlockButtons>
+          
+         <apex:pageblockSection >
+           <!--   <apex:outputLabel value="Record Type" for="rt"></apex:outputLabel> -->
+                    <apex:selectList value="{!opp.RecordTypeId}" size="1" title="Record Type" required="true">
+                        <apex:selectOptions value="{!RecordTypes}" />
+                    </apex:selectList>
+          </apex:pageblockSection> 
+      </apex:pageBlock>
+  </apex:form>
+  
+</apex:page>

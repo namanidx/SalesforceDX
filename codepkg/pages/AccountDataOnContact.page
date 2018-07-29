@@ -1,0 +1,8 @@
+<apex:page controller="AccountDataOnContact">
+    <apex:pageBlock >
+        <apex:pageBlockSection >
+            
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    
+</apex:page>

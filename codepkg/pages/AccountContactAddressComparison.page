@@ -1,0 +1,25 @@
+<apex:page standardController="Account" >
+    <apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="1">
+                <apex:outputText label="Account Name" value="{!account.name}"/>
+                <apex:outputText label="Billing Street" value="{!account.billingStreet}"/>
+                <apex:outputText label="Billing City" value="{!account.billingCity}"/>
+                <apex:outputText label="Billing Country" value="{!account.billingCountry}"/>
+                <apex:outputText label="Billing ZipCode" value="{!account.billingPostalCode}"/>
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection title="Contacts Details">
+                <apex:pageBlockTable value="{!account.contacts}" var="a">
+                    <apex:column headerValue="Contact Name" value="{!a.lastName}"/>
+                    <apex:column headerValue="Billing Street" value="{!a.MailingStreet}"/>
+                    <apex:column headerValue="Billing City" value="{!a.MailingCity}"/>
+                    <apex:column headerValue="Billing Country" value="{!a.MailingCountry}"/>
+                    <apex:column headerValue="Billing ZipCode" value="{!a.MailingPostalCode}"/>
+                </apex:pageBlockTable>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+
+  
+</apex:page>

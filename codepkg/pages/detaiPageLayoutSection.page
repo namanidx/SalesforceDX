@@ -1,0 +1,49 @@
+<apex:page standardcontroller="Contact" extensions="PageLayoutController">
+ <apex:form >   
+    <style>
+div.element {
+    vertical-align: middle;
+    height: auto;
+    border: 1px solid white;
+}
+#content2AM {
+  float: right;
+  width: 50%;
+}
+</style>
+           <apex:pageBlock >
+             <div class="element">
+             <label for="Manuf">Contact Name:</label> 
+                   <apex:outputText label="contact name" value="{!contact.name}"/>
+             </div> 
+                   <div class="element">
+                   <label for="Manuf">Contact Phone:</label>
+                    <apex:outputText label="phone" value="{!contact.phone}"/>
+                     </div>
+             
+             
+                <apex:pageBlockTable value="{!Records}" var="a">
+                <apex:repeat >
+                <div id="content2AM">
+                <div class="element">
+                    <label for="Manuf">Account Name:</label> 
+                   <apex:outputText label="contact name" value="{!a.account.name}"/>
+                   
+                   
+                   <!-- <apex:column headerValue="name"  value="{!a.account.name}"/>
+                    <apex:column headerValue="Rating"  value="{!a.account.Rating}"/>
+                    <apex:column headerValue="Phone"  value="{!a.account.Phone}"/> -->
+                   
+                 </div>
+                </div>  
+                </apex:repeat>
+                </apex:pageBlockTable>   
+                <apex:pageblockSection title="Test">
+                    <apex:inputfield value="{!contact.lastname}"/> 
+                    
+                </apex:pageblockSection>
+             
+      </apex:pageBlock>     
+   </apex:form>
+  
+</apex:page>

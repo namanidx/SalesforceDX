@@ -1,0 +1,27 @@
+<apex:page controller="Sample">
+<apex:form >
+    <apex:pageblock id="pg1" title="Block1">
+        <apex:outputText value="{!one}"/>
+    </apex:pageblock>
+    
+    <apex:pageblock id="pg2" title="Block2">
+        <apex:outputText value="{!two}"/>    
+    </apex:pageblock>
+    
+    <apex:pageblock id="pg3" title="Block3">
+        <apex:outputText value="{!three}"/>    
+    </apex:pageblock>
+    
+    <apex:pageblock id="pg4" title="Block4">
+        <apex:outputText value="{!four}"/>    
+    </apex:pageblock>
+    
+    <apex:pageblock id="pg5" title="Block5">
+        <apex:outputText value="{!five}"/>    
+    </apex:pageblock>     
+    
+    <apex:commandButton value="Show123" action="{!show123}" reRender="pg1,pg2,pg3"/>   
+    <br/><br/><br/><br/>
+    <apex:commandButton value="Show45" action="{!show45}" reRender="pg4,pg5"/>     
+</apex:form>    
+</apex:page>

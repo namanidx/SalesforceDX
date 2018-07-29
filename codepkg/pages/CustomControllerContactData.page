@@ -1,0 +1,28 @@
+<apex:page controller="ContactData">
+//<apex:pageMessages id="messages" />
+<apex:form >
+    <apex:pageBlock >
+          <apex:pageBlockButtons >
+              <apex:commandButton value="Save" action="{!UpdateRecords}"/>
+          </apex:pageBlockButtons>
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!lstcon}" var="c"> 
+                <apex:column headerValue="lastname">
+                <apex:outputText value="{!c.lastname}"/>
+                </apex:column>
+                <apex:column headerValue="phone">
+                <apex:inputText value="{!c.phone}"/>
+                </apex:column>
+                <apex:column headerValue="fax">
+                <apex:inputText value="{!c.fax}"/>
+                </apex:column>
+                <apex:column headerValue="email">
+                <apex:inputText value="{!c.email}"/>
+                </apex:column>
+                
+            </apex:pageBlockTable>
+          
+            </apex:pageBlockSection>
+    </apex:pageBlock>
+ </apex:form> 
+</apex:page>

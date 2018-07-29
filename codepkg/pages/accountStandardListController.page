@@ -1,0 +1,15 @@
+<apex:page standardController="Account" recordSetVar="Accounts" tabStyle="Account" >
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageblockTable value="{!accounts}" var="a">
+            <apex:column value="{!a.name}"/>
+            <apex:column value="{!a.phone}"/>
+            <apex:column value="{!a.rating}"/>
+            <apex:column value="{!a.Expiry_Date__c}"/>
+            
+        </apex:pageblockTable>
+        <apex:commandLink value=">>" action="{!Next}"/> &nbsp;&nbsp;&nbsp;&nbsp;
+        <apex:commandLink value="<<" action="{!Previous}"/>
+    </apex:pageBlock>
+ </apex:form> 
+</apex:page>

@@ -1,0 +1,24 @@
+<apex:page showheader="false" sidebar="false" docType="xhtml-1.0-strict" title="my title">
+ 
+    <style>
+     h3 { text-align: center }
+     p {
+    text-align:center;
+    font-size: 18px;
+}
+    </style>
+
+                  
+                 <h3> <center>This text will be center-aligned.
+                 
+                 </center>
+                 </h3>
+                 <h3> <center>This text will be center-aligned.
+                 
+                 </center>
+                 </h3>
+                 <p>Center this text!</p>
+                 <p>Center this text!</p>
+                 
+  
+</apex:page>

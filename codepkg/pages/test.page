@@ -1,0 +1,28 @@
+<apex:page controller="exampleCon">
+    <apex:form >
+        <apex:outputpanel id="counter">
+            <apex:outputText value="Click Me!: {!count}"/>
+            <apex:actionSupport event="onclick" 
+                                action="{!incrementCounter}" 
+                                rerender="counter" status="counterStatus"/>
+        </apex:outputpanel> <br/>
+        
+        <apex:actionStatus id="counterStatus" 
+                           startText=" (incrementing...)" 
+                           stopText=" (done)"/> <br/>
+                           
+        <apex:outputpanel >
+            <apex:outputText value="Rating Hot acc!: "/>
+            <apex:actionSupport event="onclick" 
+                                action="{!Acc}" 
+                                rerender="accountsData" />
+        </apex:outputpanel>  
+        <apex:pageBlock >
+            <apex:pageBlockTable id="accountsData" value="{!lstacc}" var="a">
+            <apex:column headerValue="Name">
+                <apex:outputField value="{!a.name}"/>
+             </apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>                 
+    </apex:form>
+</apex:page>

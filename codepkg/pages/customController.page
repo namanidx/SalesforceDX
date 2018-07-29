@@ -1,0 +1,23 @@
+<apex:page controller="AccountData">
+<apex:form >
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!AccountRecords}" var="a">
+            <apex:column headerValue="Name">
+                <apex:outputText value="{!a.name}"/>
+            </apex:column>
+            <apex:column headerValue="Industry">
+                <apex:outputText value="{!a.industry}"/>
+            </apex:column>
+            <apex:column headerValue="rating">
+                <apex:outputText value="{!a.rating}"/>
+            </apex:column>
+            <apex:column headerValue="phone">
+                <apex:outputText value="{!a.phone}"/>
+            </apex:column>
+            <apex:column headerValue="type">
+                <apex:inputField value="{!a.type}"/>
+            </apex:column>
+        </apex:pageBlockTable>
+    </apex:pageBlock>  
+ </apex:form> 
+</apex:page>

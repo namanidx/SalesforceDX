@@ -1,0 +1,15 @@
+<apex:page controller="SearchAccwithKeyword">
+    <apex:form >
+        <apex:pageBlock >
+            Search for Account : <apex:inputText value="{!serachKeyword}">
+            <apex:actionSupport action="{!SearchAccswithKeyword}" event="onkeyup" reRender="DisplayData"/>
+            </apex:inputText>
+        </apex:pageBlock>
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!lstacc}" var="a" id="DisplayData">
+                <apex:column value="{!a.name}"/>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

@@ -1,0 +1,16 @@
+<apex:page controller="ActionSupportController">
+    <apex:form >
+        <apex:outputPanel id="counterRerender" >
+            <apex:outputText value="Add Counter" /> <br/>
+            <apex:actionSupport event="ondblclick" action="{!CounterValue}" reRender="counterRerender" status="RerenderThis"/>
+            <apex:outputText >"{!Mycount}" </apex:outputText>
+        </apex:outputPanel> <br/>
+        <apex:actionstatus starttext="Please Wait...."  stopText="Check the counter value" id="RerenderThis"/><br/>
+        
+   <apex:outputText >Name1</apex:outputText>
+   <apex:inputText value="{!Name}"/>
+   
+   
+    </apex:form>
+    
+</apex:page>

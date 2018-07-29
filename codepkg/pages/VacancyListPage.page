@@ -1,0 +1,24 @@
+<apex:page controller="VacancyListController">
+    <script>
+        <button type = "button" onclick="document.getElementById('hello').innerHTML = Date()"
+        Click me to display Date and Time.</button>
+    </script>
+     <apex:form >
+         Name &nbsp;&nbsp;&nbsp;&nbsp; <input type ="Text" /> <br/> 
+          
+        <apex:outputText value="Enter City" />
+        <apex:inputText value="{!searchCity}"/> 
+        <apex:commandButton value="Search" action="{!doSearch}" />
+        <apex:actionSupport action="{!doSearch}"  event="onkeyup" reRender="vacancyDetails"/>
+     </apex:form>
+     <apex:outputPanel id="vacancyDetails">
+         <apex:pageBlock title="the list of vacancies are">
+             <apex:pageblockTable value="{!lstvac}" var="v">
+                 <apex:column headerValue="Vacancy Name" value="{!v.Name}"/>
+                 <apex:column headerValue="City" value="{!v.City__c}"/>
+                 <apex:column headerValue="Type" value="{!v.Type__c}"/>
+                 <apex:column headerValue="Salary" value="{!v.Salary__c}"/>
+             </apex:pageblockTable>
+         </apex:pageBlock>
+     </apex:outputPanel>
+</apex:page>

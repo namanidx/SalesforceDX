@@ -1,0 +1,21 @@
+<apex:page standardController="opportunity" >
+     <apex:form >
+        <apex:pageblock mode="edit" title=" Edit">
+            <apex:pageblockbuttons >
+                <apex:commandbutton value="Save" action="{!Save}"/>
+                <apex:commandbutton value="Cancel" action="{!Cancel}"/>
+            </apex:pageblockbuttons>
+                <apex:pageblocksection title="RecordType B" showheader="true" columns="2">
+                    <apex:inputfield value="{!Opportunity.Name}"/>
+                    <apex:outputfield value="{!Opportunity.OwnerId}"/>
+                    <apex:inputfield value="{!Opportunity.closeDate}" />
+                    <apex:inputfield value="{!Opportunity.stagename}" />
+                    
+                    <apex:pageblocksectionitem />
+                </apex:pageblocksection>
+              
+
+
+                  </apex:pageblock>
+    </apex:form>
+</apex:page>

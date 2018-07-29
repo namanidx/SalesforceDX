@@ -1,0 +1,4 @@
+<aura:component >
+    <aura:attribute name="firstname" type='string' default='srinu namani'/>
+    <p> {!'the name of the person is '+ v.firstname}</p>
+</aura:component>

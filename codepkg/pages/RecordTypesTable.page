@@ -1,0 +1,14 @@
+<apex:page controller="RecordTypesTableController">
+  <apex:pageBlock >
+      
+         <apex:pageBlockTable value="{!opptyRecTypes}" var="a">
+             <apex:column value="{!a.name}" />
+         </apex:pageBlockTable>
+     
+      
+         <apex:pageBlockTable value="{!lstacc}" var="a">
+             <apex:column value="{!a.name}" headerValue="Name"/>
+         </apex:pageBlockTable>
+      
+  </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,32 @@
+<apex:page standardController="account" showHeader="true" >  
+      <apex:form >
+          <apex:pageBlock title="Enter Account Details">
+              <apex:pageBlockButtons >
+                  <apex:commandButton value="Save" action="{!save}"/>
+              </apex:pageBlockButtons>
+                  <apex:pageBlockSection title="Account Info">
+                      <apex:inputField value="{!account.name}"/>
+                      <apex:inputField value="{!account.rating}"/>
+                      <apex:inputField value="{!account.type}"/>
+                      <apex:inputField value="{!account.AccountNumber}"/>
+                      <apex:inputField value="{!account.Industry}"/>
+                      <apex:inputField value="{!account.Sic}"/>
+                  </apex:pageBlockSection>
+                  <apex:pageBlockSection title="Address Info">
+                      <apex:inputField value="{!Account.BillingStreet}"/>
+                      <apex:inputField value="{!account.billingCity}"/>
+                      <apex:inputField value="{!account.BillingCountry}"/>
+                      <apex:inputField value="{!account.BillingPostalCode}"/>
+                  </apex:pageBlockSection>
+                  <apex:pageBlockSection title="Contact Info">
+                      <apex:inputField Value="{!account.phone}"/>
+                      <apex:inputField value="{!account.fax}"/>
+                      <apex:inputField value="{!account.Expiry_Date__c}"/>
+                  </apex:pageBlockSection>
+                  
+                  
+              
+          </apex:pageBlock>
+      </apex:form>
+ 
+</apex:page>
